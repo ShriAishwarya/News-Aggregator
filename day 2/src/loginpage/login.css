@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+* {
+  margin: 20px auto;
+}
+body {
+  background: url("./images.jpg");
+}
+.wrapper {
+  width: 600px;
+  height: 400px;
+  margin-top: 80px;
+  position: relative;
+  box-shadow: 1px 2px 10px #2f3542;
+  background: linear-gradient(to right, #dfe6e9 50%, #fff 50%);
+  
+  
+}
+.button {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  top: 70%;
+}
+.button--checkbox {
+  display: none;
+}
+.button_cta .card_button {
+  border: 1px solid #57606f;
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #ed52c1;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+.button_cta .card_button:hover {
+  background: #5352ed;
+  color: white;
+}
+.button--checkbox:checked ~ .card {
+  left: 240px;
+}
+.button--checkbox:checked ~ .card input[type=text] {
+  margin-top: -80px;
+  visibility: none;
+}
+.button--checkbox:checked ~ .card .btn .btn__signup {
+  transform: translateY(-200%);
+}
+.button--checkbox:checked ~ .card .btn .btn__login {
+  top: 0;
+}
+
+.card {
+  display: grid;
+  height: 420px;
+  width: 300px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  background: white;
+  overflow: hidden;
+  position: relative;
+  top: -420px;
+  left: 50px;
+  transition: all 0.3s ease;
+}
+.card input {
+  display: block;
+  outline: none;
+  border: none;
+  margin-top: 10px;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  transition: all 0.4s ease;
+  
+}
+.card input::placeholder {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+}
+.card .btn {
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, #2e65cc, #2771ae);
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  bottom: 10px;
+  left: 30px;
+  font-size: 18px;
+  overflow: hidden;
+  font-weight: 300;
+  
+}
+.card .btn > * {
+  display: inline-block;
+  width: 220px;
+  transition: all 0.3s;
+}
+.card .btn__signup {
+  padding: 1px 0;
+}
+.card .btn__login {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 1px 0;
+}
+.card .btn:hover {
+  background: linear-gradient(to right, #4bb3e7, #68bbe4);
+}
